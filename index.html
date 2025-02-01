@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="outermost">
+  
+<div class="outer">
+  <p>play and enjoy</p>
+  <button type="submit" onclick="check('rock')" class="css-button"><img src="images/rock.jpg" alt="" class="imgs"></button>
+  <button type="submit" onclick="check('paper')" class="css-button"><img src="images/paper.jpg" alt="" class="imgs"></button>
+  <button type="submit" onclick="check('scissor')" class="css-button"><img src="images/scissors.jpg" alt="" class="imgs"></button>
+  <p class="statement">Statement</p>
+  <p class="result">Score</p>
+  <p class="computer-move">Computer move :</p>
+  <button type="submit" onclick="
+  score.lose=score.win=score.tie=0 ;
+  localStorage.setItem('score',JSON.stringify(score));
+
+  document.querySelector('.result').innerText=`wins:${score.win}, loses:${score.lose}, ties:${score.tie}`
+
+  " class="css-reset">Reset Score</button>
+
+</div>
+</div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
