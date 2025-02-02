@@ -4,6 +4,15 @@ const score = {
   tie: 0
 };
 
+const rockButton=document.querySelector(".js-rock-button");
+rockButton.addEventListener('click',()=>check('rock'));
+
+const paperButton=document.querySelector(".js-paper-button");
+paperButton.addEventListener('click',()=>check('paper'));
+
+const scissorsButton=document.querySelector(".js-scissors-button");
+scissorsButton.addEventListener('click',()=>check('scissor'));
+
 const savedScore = localStorage.getItem('score');
 if (savedScore) {
   Object.assign(score, JSON.parse(savedScore));
